@@ -1,0 +1,5 @@
+<app-header></app-header>
+<app-personagem *ngFor="let i of personagens"
+                [nome]="i.nome" [palisman]="i.palisman"
+                [ehPalisman]="i.ehPalisman"
+                [nivel]="i.nivel"></app-personagem>

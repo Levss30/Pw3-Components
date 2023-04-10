@@ -1,0 +1,18 @@
+<div>
+  Personagem: {{nome}}
+  <div *ngIf="ehPalisman; else naopalisman">
+    Palisman: {{palisman}}
+  </div>
+  <div [ngSwitch]="nivel">
+  <p *ngSwitchCase="1">Mestre</p>
+  <p *ngSwitchCase="2">Professor</p>
+  <p *ngSwitchCase="3">Comum</p>
+  <p *ngSwitchCase="4">Aprendiz</p>
+  <p>Sem classificação</p>
+  </div>
+  <ng-template #naopalisman>
+      <p>
+        Não tem palisman
+      </p>
+  </ng-template>
+</div>
